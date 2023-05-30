@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Info</h3>
+        <p>Row count: {{ row_count }}</p>
+        <p>Intersection percent: {{ intersection_percent }} %</p>
+        <h3>Metrics</h3>
+        <p>Mean: {{ mean_similarity }}</p>
+        <p>Median: {{ median_similarity }}</p>
+        <p>Std: {{ std_similarity }}</p>
+        <h3>Similarities distribution histogram</h3>
+        <img src="data:image/png;base64,{{ sims_histplot }}" alt="Histogram">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>CSV Info</h3>
+        <p>Row count: {{ row_count }}</p>
+        <p>Column count: {{ column_count }}</p>
+        <p>Column names: {{ column_names }}</p>
+        <h3>Histogram</h3>
+        <img src="data:image/png;base64,{{ histogram_image }}" alt="Histogram">
+    </div>
+</body>
+
+</html>
